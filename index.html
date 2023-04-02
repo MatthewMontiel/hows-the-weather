@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
   <title>How's the Weather?</title>
 </head>
 <body>
@@ -14,13 +15,13 @@
 <!---->
 <section class="m-4 p-4">
   <section class="col-md-12">
-  <section class="row">
+    <section class="row">
     <!---->
-    <section class="col-md-4">
+    <section class="col-md-3">
       <!--form-->
       <h3>Type your city here!</h3>
       <form class="form-inline" id="searchBar">
-        <input type="search" class="form-control mb-3" id="cityName" placeholder="Enter the city">
+        <input type="search" class="form-control mb-3 ds-input" id="cityName" placeholder="Enter the city">
         <button type="submit" class="btn btn-primary mb-3">Search</button>
       </form>
       <!--history-->
@@ -52,7 +53,12 @@
   </section>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=Promise"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise"></script>
+  <script src="https://unpkg.com/dayjs-with-plugins"></script>
+  <script src="./assets/script.js"</script>
 </body>
 </html>
