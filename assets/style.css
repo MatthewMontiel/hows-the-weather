@@ -1,3 +1,11 @@
-.headerGrad {
-    background: linear-gradient(to top, #fc5c7d, #6a82fb);
+.bg-dark {
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+}
+
+.background {
+    background-image: url(./images/pexels-johannes-plenio-1118873\ \(1\).jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
