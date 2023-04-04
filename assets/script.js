@@ -4,9 +4,9 @@ let lastCitySearched = "";
 let getWeather = function (city) {
   let apiURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
-    cityName +
-    "&appid=8981a04d4bc24c1c6cc03d5640d64cf9&units=imperial";
-    console.log(apiURL);
+    city +
+    "&units=imperial&appid=8981a04d4bc24c1c6cc03d5640d64cf9";
+    console.log("hello world");
   fetch(apiURL)
     .then(function (response) {
       if (response.ok) {
@@ -17,9 +17,8 @@ let getWeather = function (city) {
         alert("Error: " + response.statusText);
       }
     })
-    .catch(function (error) {
-      alert("Unable to connect to OpenWeather");
-    });
+  
+
 };
 
 let searchSubmitHandler = function (event) {
@@ -34,23 +33,14 @@ let searchSubmitHandler = function (event) {
 };
 
 let displaygetWeath = function (weatherData) {
-  $("main-city-name")
-    .text(
-      weatherData.name +
-        " (" +
-        dayjs(weatherData.dt * 1000).format("MM/DD/YYYY") +
-        ")"
-    )
-    .append(
-      `<img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png"></img>`
-    );
-  $("main-city-temp").text(
-    "Temperature: " + weatherData.main.temp.toFixed(1) + "°F"
-  );
-  $("main-city-humid").text("Humidity: " + weatherData.main.humidity + "%");
-  $("main-city-wind").text(
-    "Wind Speed: " + weatherData.wind.speed.toFixed(1) + "mph"
-  );
+  
+  $("#main-city-name").text(weatherData.name + " (" +
+        dayjs(weatherData.dt * 1000).format("MM/DD/YYYY") + ")"
+    ).append(
+      `<img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png"></img>`);
+  $("#main-city-temp").text("Temperature: " + weatherData.main.temp.toFixed(1) + "°F");
+  $("#main-city-humid").text("Humidity: " + weatherData.main.humidity + "%");
+  $("#main-city-wind").text("Wind Speed: " + weatherData.wind.speed.toFixed(1) + "mph");
 
   fetch(
     "https://api.openweathermap.org/data/2.5/uvi?lat=" +
