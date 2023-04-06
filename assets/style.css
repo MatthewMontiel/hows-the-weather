@@ -1,11 +1,23 @@
-.bg-dark {
+.header{
     background: linear-gradient(to right, #ee0979, #ff6a00);
+    font-size: x-large;
+    color: black;
 }
 
-.background {
-    background-image: url(./images/pexels-johannes-plenio-1118873\ \(1\).jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+html {
+    background: url(./images/pexels-johannes-plenio-1118873\ \(1\).jpg) no-repeat center center fixed;
+}
 
+
+* {
+    font-family: 'Audiowide', cursive;
+    
+}
+
+#fiveFontColor{
+    color: white;
+}
+
+.card{
+    background-color: #fdbb2d;
 }
