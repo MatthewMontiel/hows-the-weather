@@ -1,5 +1,5 @@
 # hows-the-weather
-Weather APi
+Weather API
 
 Created a weather app that uses a weather api call to openweather.org to get data for a inputed location.
 
